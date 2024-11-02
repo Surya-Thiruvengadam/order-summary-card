@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("./utilities.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Paleblue: hsl(225, 100%, 94%);
+  --Brightblue: hsl(245, 75%, 52%);
+  --Verypaleblue: hsl(225, 100%, 98%);
+  --Desaturatedblue: hsl(224, 23%, 55%);
+  --Darkblue: hsl(223, 47%, 23%);
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--Paleblue);
+  background-image: url("./images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: grid;
+  place-content: center;
+  font-size: 1.5rem;
+  font-family: "Red Hat Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+main {
+  margin-top: 10rem;
+  background-color: white;
+  max-width: 40.5rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  margin-inline: 2.5rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.order-details {
+  text-align: center;
+  padding: 3.3rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+
+.order-details p {
+  margin-top: -1rem;
+  color: var(--Desaturatedblue);
+  line-height: 1.5;
+}
+
+.plans {
+  display: flex;
+  column-gap: 2rem;
+  padding: 2rem;
+  background-color: var(--Verypaleblue);
+  font-size: 1.4rem;
+}
+.plans > img {
+  width: 4rem;
+}
+.plans > div {
+  line-height: 1.5;
+}
+
+.plans .link {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.link button {
+  color: var(--Brightblue);
+  text-decoration: underline;
+  font-weight: 550;
+}
+
+.link button:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+button {
+  font-size: 1.4rem;
+  border: unset;
+  cursor: pointer;
+  background-color: unset;
+}
+
+.proceed-btn {
+  padding-block: 1.8rem;
+  background-color: var(--Brightblue);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0px 10px 34px -1px rgba(56, 41, 224, 0.49);
+  -webkit-box-shadow: 0px 10px 34px -1px rgba(56, 41, 224, 0.49);
+  -moz-box-shadow: 0px 10px 34px -1px rgba(56, 41, 224, 0.49);
+}
+
+.proceed-btn:hover {
+  background-color: rgb(115, 103, 249);
+}
+
+.cancel-btn {
+  color: var(--Desaturatedblue);
+}
+
+.cancel-btn:hover {
+  color: var(--Darkblue);
+}
+
+@media screen and (min-width: 745px) {
+  body {
+    background-image: url("./images/pattern-background-desktop.svg");
+  }
+
+  .order-details {
+    padding-inline: 3.8rem;
+  }
+}
